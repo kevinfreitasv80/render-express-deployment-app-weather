@@ -9,7 +9,7 @@ const port = process.env.PORT || 4625;
 app.use(express.json());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://kevinfreitasv80.github.io",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
