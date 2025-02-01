@@ -73,4 +73,7 @@ function getFormattedDate(arr) {
   return { listWeather, listWind };
 }
 
-module.exports = { url, getFormattedDate };
+const formatResult = (result) =>
+  result.status === "fulfilled" ? result.value : { error: result.reason };
+
+module.exports = { url, getFormattedDate, formatResult };
